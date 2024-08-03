@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
   const [formData, setFormData] = useState({
@@ -29,18 +30,16 @@ const Register = () => {
     setConfirmPasswordVisible(!confirmPasswordVisible);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add your registration logic here
+
+    // Redirect to the OTP page
+    navigate("/otp");
+  };
+
   return (
     <div className="register-page">
-      {/* Preloader */}
-      <div className="preload preload-container">
-        <div
-          className="preload-logo"
-          style={{ backgroundImage: "url('images/logo/144.png')" }}
-        >
-          <div className="spinner"></div>
-        </div>
-      </div>
-      {/* Header */}
       <div className="header fixed-top bg-surface">
         <Link to="#" className="left back-btn">
           <i className="icon-left-btn"></i>
@@ -48,7 +47,7 @@ const Register = () => {
       </div>
       <div className="pt-45">
         <div className="tf-container">
-          <form action="otp" className="mt-32 mb-16">
+          <form onSubmit={handleSubmit} className="mt-32 mb-16">
             <h2 className="text-center">Register Cointex</h2>
             <fieldset className="mt-40">
               <label className="label-ip">
@@ -151,7 +150,9 @@ const Register = () => {
                 <span className="text-white">Terms and condition</span>
               </label>
             </fieldset>
-            <button className="mt-40">Create an account</button>
+            <button type="submit" className="mt-40">
+              Create an account
+            </button>
           </form>
         </div>
       </div>

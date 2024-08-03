@@ -1,10 +1,21 @@
-import React from "react";
-import logo144 from "path/to/images/logo/144.png";
-import banner from "path/to/images/banner/boarding1.jpg";
+import React, { useState, useEffect } from "react";
+import logo144 from "../../assets/images/logo/144.png";
+import banner from "../../assets/images/banner/boarding1.jpg";
+import { Link } from "react-router-dom";
 
 const Welcome = () => {
-  return (
-    <div>
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Adjust the timeout duration as needed
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
       <div className="preload preload-container">
         <div
           className="preload-logo"
@@ -13,8 +24,13 @@ const Welcome = () => {
           <div className="spinner"></div>
         </div>
       </div>
+    );
+  }
+
+  return (
+    <div>
       <div className="header">
-        <a href="log-in.html" className="right">
+        <a href="/login" className="right">
           Skip
         </a>
       </div>
@@ -81,9 +97,9 @@ const Welcome = () => {
                 Discover the world of cryptocurrencies and manage your assets
                 securely and conveniently.
               </p>
-              <a href="boarding.html" className="tf-btn primary md mt-40">
+              <Link to="/boarding" className="tf-btn primary md mt-40">
                 Next
-              </a>
+              </Link>
               <p className="mt-20 text-center mb-35">
                 By creating an account, you’re agree to our{" "}
                 <a

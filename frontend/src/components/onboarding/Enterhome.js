@@ -1,18 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import logo144 from "../../assets/images/logo/144.png";
 
 const Enterhome = () => {
-  return (
-    <div className="info-received-page">
-      {/* Preloader */}
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Adjust the timeout duration as needed
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
       <div className="preload preload-container">
         <div
           className="preload-logo"
-          style={{ backgroundImage: "url('images/logo/144.png')" }}
+          style={{ backgroundImage: `url(${logo144})` }}
         >
           <div className="spinner"></div>
         </div>
       </div>
+    );
+  }
+  return (
+    <div className="info-received-page">
       {/* Header */}
       <div className="header fixed-top bg-surface d-flex justify-content-center align-items-center">
         <Link to="#" className="left back-btn">
@@ -76,7 +90,7 @@ const Enterhome = () => {
           <p className="mt-12 text-center text-large">
             Your information has been confirmed, welcome to Cointex!
           </p>
-          <Link to="/log-in" className="tf-btn primary lg mt-40">
+          <Link to="/home" className="tf-btn primary lg mt-40">
             Done
           </Link>
         </div>

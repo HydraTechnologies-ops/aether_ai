@@ -65,7 +65,7 @@ const Boarding2 = () => {
               Explore the diverse features of Cointex. Send and receive funds,
               track transaction history, create new wallets, and much more.
             </p>
-            <Link to="/log-in" className="tf-btn primary md mt-40">
+            <Link to="/login" className="tf-btn primary md mt-40">
               Get Started
             </Link>
             <p className="mt-20 text-center mb-35">

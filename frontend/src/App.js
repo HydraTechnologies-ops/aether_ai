@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Welcome from "./components/onboarding/Welcome";
 import Boarding from "./components/onboarding/Boarding";
 import Boarding2 from "./components/onboarding/Boarding2";
@@ -18,14 +18,14 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" component={Welcome} />
-        <Route path="/boarding" component={Boarding} />
-        <Route path="/boarding2" component={Boarding2} />
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-        <Route path="/otp" component={Otp} />
-        <Route path="/enterhome" component={Enterhome} />
-        <Route path="/home" component={Home} />
+        <Route path="/" element={<Welcome />} />
+        <Route path="/boarding" element={<Boarding />} />
+        <Route path="/boarding2" element={<Boarding2 />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/otp" element={<Otp />} />
+        <Route path="/enterhome" element={<Enterhome />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </Router>
   );

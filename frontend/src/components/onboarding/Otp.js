@@ -33,15 +33,6 @@ const Otp = () => {
 
   return (
     <div className="otp-page">
-      {/* Preloader */}
-      <div className="preload preload-container">
-        <div
-          className="preload-logo"
-          style={{ backgroundImage: "url('images/logo/144.png')" }}
-        >
-          <div className="spinner"></div>
-        </div>
-      </div>
       {/* Header */}
       <div className="header fixed-top bg-surface d-flex justify-content-center align-items-center">
         <Link to="#" className="left back-btn">

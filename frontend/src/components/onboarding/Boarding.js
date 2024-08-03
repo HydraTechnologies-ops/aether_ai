@@ -1,5 +1,6 @@
 import React from "react";
-import banner from "path/to/images/banner/Boarding2.jpg";
+import { Link } from "react-router-dom";
+import banner from "../../assets/images/banner/boarding2.jpg";
 
 const Boarding = () => {
   return (
@@ -63,9 +64,9 @@ const Boarding = () => {
               With advanced encryption technology, your information and assets
               are protected with utmost security.
             </p>
-            <a href="boarding2.html" className="tf-btn primary md mt-40">
+            <Link to="/boarding2" className="tf-btn primary md mt-40">
               Next
-            </a>
+            </Link>
             <p className="mt-20 text-center mb-35">
               By creating an account, you’re agree to our{" "}
               <a

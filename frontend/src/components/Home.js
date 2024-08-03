@@ -1,24 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Favourite from "./Favourite";
+import logo144 from "../assets/images/logo/144.png";
+import Favourite from "./Homecategories/Favourite";
 import Top from "./Homecategories/Top";
 import Popular from "./Homecategories/Popular";
 import Tokenprice from "./Homecategories/Tokenprice";
 import Newtoken from "./Homecategories/Newtoken";
 
 const Home = () => {
-  return (
-    <>
-      {/* Preloader */}
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Adjust the timeout duration as needed
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
       <div className="preload preload-container">
         <div
           className="preload-logo"
-          style={{ backgroundImage: "url('images/logo/144.png')" }}
+          style={{ backgroundImage: `url(${logo144})` }}
         >
           <div className="spinner"></div>
         </div>
       </div>
-
+    );
+  }
+  return (
+    <>
       {/* Header */}
       <div className="header-style2 fixed-top bg-menuDark">
         <div className="d-flex justify-content-between align-items-center gap-14">
