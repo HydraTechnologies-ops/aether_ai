@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import bord3 from "../../assets/images/banner/boarding3.jpg";
 const Boarding2 = () => {
   return (
     <div className="wrap-boarding">
       <div className="tf-container">
         <div className="d-flex flex-column min-vh-100 justify-content-between">
           <div className="banner-boarding2 mt-20">
-            <img src="images/banner/boarding3.jpg" alt="img" />
+            <img src={bord3} alt="img" />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="375"

@@ -7,6 +7,12 @@ import Popular from "./Homecategories/Popular";
 import Tokenprice from "./Homecategories/Tokenprice";
 import Newtoken from "./Homecategories/Newtoken";
 
+// images
+import avt from "../assets/images/avt/avt2.jpg";
+import coin3 from "../assets/images/coin/coin-3.jpg";
+import market1 from "../assets/images/coin/market-3.jpg";
+import market from "../assets/images/coin/market-1.jpg";
+
 const Home = () => {
   const [loading, setLoading] = useState(true);
 
@@ -37,7 +43,7 @@ const Home = () => {
         <div className="d-flex justify-content-between align-items-center gap-14">
           <div className="box-account style-2">
             <Link to="user-info.html">
-              <img src="images/avt/avt2.jpg" alt="img" className="avt" />
+              <img src={avt} alt="img" className="avt" />
             </Link>
             <div className="search-box box-input-field style-2">
               <Link to="home-search.html" className="icon-search"></Link>
@@ -142,11 +148,7 @@ const Home = () => {
                 <div className="swiper-slide">
                   <Link to="exchange-market.html" className="coin-box d-block">
                     <div className="coin-logo">
-                      <img
-                        src="images/coin/market-1.jpg"
-                        alt="img"
-                        className="logo"
-                      />
+                      <img src={market} alt="img" className="logo" />
                       <div className="title">
                         <p>Bitcoin</p>
                         <span>BTC</span>
@@ -167,11 +169,7 @@ const Home = () => {
                 <div className="swiper-slide">
                   <Link to="exchange-market.html" className="coin-box d-block">
                     <div className="coin-logo">
-                      <img
-                        src="images/coin/market-3.jpg"
-                        alt="img"
-                        className="logo"
-                      />
+                      <img src={market1} alt="img" className="logo" />
                       <div className="title">
                         <p>Binance</p>
                         <span>BNB</span>
@@ -192,11 +190,7 @@ const Home = () => {
                 <div className="swiper-slide">
                   <Link to="exchange-market.html" className="coin-box d-block">
                     <div className="coin-logo">
-                      <img
-                        src="images/coin/coin-3.jpg"
-                        alt="img"
-                        className="logo"
-                      />
+                      <img src={coin3} alt="img" className="logo" />
                       <div className="title">
                         <p>Ethereum</p>
                         <span>ETH</span>
@@ -223,7 +217,7 @@ const Home = () => {
             <div className="wrap-filter-swiper">
               <h5>
                 <Link to="/cryptex-rating" className="cryptex-rating">
-                  <i className="icon-star"></i>Cryptex Rating
+                  <i className="icon-star"></i>Aether Rating
                 </Link>
               </h5>
               <div className="swiper-wrapper1 menu-tab-v3 mt-12" role="tablist">

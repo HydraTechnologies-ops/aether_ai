@@ -1,5 +1,13 @@
 import React from "react";
 
+// images
+import eth from "../../assets/images/coin/coin-6.jpg";
+import arbeth from "../../assets/images/coin/coin-7.jpg";
+import wbtc from "../../assets/images/coin/coin-8.jpg";
+import arb from "../../assets/images/coin/coin-3.jpg";
+import weth from "../../assets/images/coin/coin-9.jpg";
+import matic from "../../assets/images/coin/coin-10.jpg";
+
 const Favourite = () => {
   const coins = [
     {
@@ -8,7 +16,7 @@ const Favourite = () => {
       marketCap: "$360,6M",
       price: "$1.878,80",
       change: "-1,62%",
-      image: "images/coin/coin-6.jpg",
+      image: eth,
       trend: "decrease",
     },
     {
@@ -17,7 +25,7 @@ const Favourite = () => {
       marketCap: "$132,18M",
       price: "$1.878,80",
       change: "+1,62%",
-      image: "images/coin/coin-7.jpg",
+      image: arbeth,
       trend: "increase",
     },
     {
@@ -26,7 +34,7 @@ const Favourite = () => {
       marketCap: "$50,56M",
       price: "$30.001,96",
       change: "-1,64%",
-      image: "images/coin/coin-8.jpg",
+      image: wbtc,
       trend: "decrease",
     },
     {
@@ -35,7 +43,7 @@ const Favourite = () => {
       marketCap: "$31,55M",
       price: "$1,11",
       change: "+3,71%",
-      image: "images/coin/coin-3.jpg",
+      image: arb,
       trend: "increase",
     },
     {
@@ -44,7 +52,7 @@ const Favourite = () => {
       marketCap: "$24,34M",
       price: "$1.878,56",
       change: "-1,62%",
-      image: "images/coin/coin-9.jpg",
+      image: weth,
       trend: "decrease",
     },
     {
@@ -53,7 +61,7 @@ const Favourite = () => {
       marketCap: "$19,36M",
       price: "$0,666",
       change: "-4,42%",
-      image: "images/coin/coin-10.jpg",
+      image: matic,
       trend: "decrease",
     },
   ];
