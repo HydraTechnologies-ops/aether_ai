@@ -1,35 +1,35 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import banner from "path/to/images/banner/Boarding2.jpg";
 
-const Boarding2 = () => {
+const Boarding = () => {
   return (
     <div className="wrap-boarding">
       <div className="tf-container">
         <div className="d-flex flex-column min-vh-100 justify-content-between">
           <div className="banner-boarding2 mt-20">
-            <img src="images/banner/boarding3.jpg" alt="img" />
+            <img src={banner} alt="banner" />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="375"
-              height="335"
-              viewBox="0 0 381 335"
+              height="371"
+              viewBox="0 0 390 371"
               fill="none"
             >
-              <g opacity="0.8" filter="url(#filter0_f_1_12068)">
+              <g opacity="0.8" filter="url(#filter0_f_1_12104)">
                 <path
-                  d="M269.131 167.427C182.034 233.37 239.606 233.37 203.186 233.37C166.765 233.37 237.195 246.642 137.241 167.427C37.2862 88.2118 166.765 101.483 203.186 101.483C239.606 101.483 356.228 101.483 269.131 167.427Z"
-                  fill="url(#paint0_linear_1_12068)"
+                  d="M296.173 185.722C185.542 269.933 258.671 269.933 212.41 269.933C166.148 269.933 255.608 286.881 128.646 185.722C1.68354 84.5628 166.148 101.511 212.41 101.511C258.671 101.511 406.804 101.511 296.173 185.722Z"
+                  fill="url(#paint0_linear_1_12104)"
                 />
               </g>
               <defs>
                 <filter
-                  id="filter0_f_1_12068"
-                  x="0.106079"
-                  y="0.647461"
-                  width="400.637"
-                  height="333.559"
+                  id="filter0_f_1_12104"
+                  x="-18.5225"
+                  y="0.443359"
+                  width="454.85"
+                  height="370.557"
                   filterUnits="userSpaceOnUse"
-                  colorInterpolationFilters="sRGB"
+                  color-interpolation-filters="sRGB"
                 >
                   <feFlood floodOpacity="0" result="BackgroundImageFix" />
                   <feBlend
@@ -40,15 +40,15 @@ const Boarding2 = () => {
                   />
                   <feGaussianBlur
                     stdDeviation="50"
-                    result="effect1_foregroundBlur_1_12068"
+                    result="effect1_foregroundBlur_1_12104"
                   />
                 </filter>
                 <linearGradient
-                  id="paint0_linear_1_12068"
-                  x1="275.664"
-                  y1="100.647"
-                  x2="193.485"
-                  y2="267.1"
+                  id="paint0_linear_1_12104"
+                  x1="304.471"
+                  y1="100.443"
+                  x2="199.186"
+                  y2="312.56"
                   gradientUnits="userSpaceOnUse"
                 >
                   <stop stopColor="#E250E5" />
@@ -58,16 +58,14 @@ const Boarding2 = () => {
             </svg>
           </div>
           <div className="content mb-32">
-            <h2 className="text-center">
-              A Fantastic Experience with Cointex!
-            </h2>
+            <h2 className="text-center">Top-notch Security and Safety!</h2>
             <p className="mt-8 text-center text-large">
-              Explore the diverse features of Cointex. Send and receive funds,
-              track transaction history, create new wallets, and much more.
+              With advanced encryption technology, your information and assets
+              are protected with utmost security.
             </p>
-            <Link to="/log-in" className="tf-btn primary md mt-40">
-              Get Started
-            </Link>
+            <a href="boarding2.html" className="tf-btn primary md mt-40">
+              Next
+            </a>
             <p className="mt-20 text-center mb-35">
               By creating an account, you’re agree to our{" "}
               <a
@@ -83,7 +81,7 @@ const Boarding2 = () => {
                 className="text-white"
                 data-bs-toggle="modal"
               >
-                Term of use
+                Terms of use
               </a>
             </p>
           </div>
@@ -137,4 +135,4 @@ const Boarding2 = () => {
   );
 };
 
-export default Boarding2;
+export default Boarding;
