@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo144 from "../../assets/images/logo/144.png";
+import bannerimg from "../../assets/images/logo/144.png";
 
 const Enterhome = () => {
   const [loading, setLoading] = useState(true);
@@ -36,7 +37,7 @@ const Enterhome = () => {
       <div className="pt-45 pb-16">
         <div className="tf-container">
           <div className="banner-received mt-32">
-            <img src="images/banner/banner1.jpg" alt="img" />
+            <img src={bannerimg} alt="img" />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="350"

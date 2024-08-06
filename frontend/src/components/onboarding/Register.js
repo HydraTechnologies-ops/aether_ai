@@ -48,7 +48,7 @@ const Register = () => {
       <div className="pt-45">
         <div className="tf-container">
           <form onSubmit={handleSubmit} className="mt-32 mb-16">
-            <h2 className="text-center">Register Cointex</h2>
+            <h2 className="text-center">Register Aether</h2>
             <fieldset className="mt-40">
               <label className="label-ip">
                 <p className="mb-8 text-small">Name</p>

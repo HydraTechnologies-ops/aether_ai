@@ -58,11 +58,9 @@ const Boarding2 = () => {
             </svg>
           </div>
           <div className="content mb-32">
-            <h2 className="text-center">
-              A Fantastic Experience with Cointex!
-            </h2>
+            <h2 className="text-center">A Fantastic Experience with Aether!</h2>
             <p className="mt-8 text-center text-large">
-              Explore the diverse features of Cointex. Send and receive funds,
+              Explore the diverse features of Aether. Send and receive funds,
               track transaction history, create new wallets, and much more.
             </p>
             <Link to="/login" className="tf-btn primary md mt-40">
