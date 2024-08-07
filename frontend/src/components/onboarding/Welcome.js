@@ -91,7 +91,7 @@ const Welcome = () => {
             </div>
             <div className="content mb-32">
               <h2 className="text-center">
-                Welcome to Cointex Crypto Wallet app
+                Welcome to Aether Crypto Wallet app
               </h2>
               <p className="mt-8 text-center text-large">
                 Discover the world of cryptocurrencies and manage your assets

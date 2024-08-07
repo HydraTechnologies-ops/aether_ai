@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import facebook from "../../assets/images/logo/fb.jpg";
+import google from "../../assets/images/logo/google.jpg";
+import apple from "../../assets/images/logo/apple.jpg";
 
 const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -19,24 +22,21 @@ const Login = () => {
       <div className="pt-45 pb-20">
         <div className="tf-container">
           <div className="mt-32">
-            <h2 className="text-center">Login Cointex</h2>
+            <h2 className="text-center">Login Aether</h2>
             <ul className="mt-40 socials-login">
               <li className="mt-12">
                 <Link to="/home" className="tf-btn md social dark">
-                  <img src="images/logo/fb.jpg" alt="img" /> Continue with
-                  Facebook
+                  <img src={facebook} alt="img" /> Continue with Facebook
                 </Link>
               </li>
               <li className="mt-12">
                 <Link to="/home" className="tf-btn md social dark">
-                  <img src="images/logo/google.jpg" alt="img" /> Continue with
-                  Google
+                  <img src={google} alt="img" /> Continue with Google
                 </Link>
               </li>
               <li className="mt-12">
                 <Link to="/home" className="tf-btn md social dark">
-                  <img src="images/logo/apple.jpg" alt="img" /> Continue with
-                  Apple
+                  <img src={apple} alt="img" /> Continue with Apple
                 </Link>
               </li>
             </ul>

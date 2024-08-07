@@ -9,9 +9,9 @@ import Otp from "./components/onboarding/Otp";
 import Enterhome from "./components/onboarding/Enterhome";
 import Home from "./components/Home";
 
+
 import "./assets/css/styles.css";
 import "./assets/css/swiper-bundle.min.css";
-import "./assets/css/bootstrap.min.css";
 import "./assets/fonts/font-icons.css";
 import "./assets/fonts/fonts.css";
 

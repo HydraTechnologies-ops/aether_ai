@@ -78,7 +78,7 @@ const Otp = () => {
               />
             </div>
             <p className="text-center text-small text-white mt-16">
-              A code has been sent to your phone
+              A code has been sent to your mail
             </p>
             <p className="d-flex justify-content-center mt-4 text-center text-button text-primary fw-6">
               Resend in&nbsp;<span className="js-countdown">{countdown}</span>
