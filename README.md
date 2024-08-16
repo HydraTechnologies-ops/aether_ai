@@ -21,7 +21,10 @@ Aether AI is built with a focus on delivering a smart, automated, and user-frien
 Aether AI's architecture comprises several key components:
 
 **Generative AI Engine:** This engine uses machine learning algorithms to analyze market data and adjust fund distribution strategies in real-time.
+
 **Multi-Chain Integration:** Supports interoperability with major blockchains such as Ethereum, Polygon, Avalanche, and others, enabling seamless fund transfers and operations.
+
 **Smart Contracts:** Deployed on various blockchains to automate transactions, yield farming, and staking processes.
+
 **User Interface:** A responsive web application providing an intuitive and user-friendly portfolio management experience.
 
