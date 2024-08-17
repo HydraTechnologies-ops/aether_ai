@@ -2,11 +2,9 @@ import React, { useState, useEffect } from "react";
 
 // images
 import eth from "../../assets/images/coin/coin-6.jpg";
-import arbeth from "../../assets/images/coin/coin-7.jpg";
 import wbtc from "../../assets/images/coin/coin-8.jpg";
 import arb from "../../assets/images/coin/coin-3.jpg";
 import weth from "../../assets/images/coin/coin-9.jpg";
-import matic from "../../assets/images/coin/coin-10.jpg";
 
 const Favourite = () => {
   const [coins, setCoins] = useState([
@@ -31,13 +29,13 @@ const Favourite = () => {
     {
       id: 4,
       name: "Litecoin",
-      image: weth,
+      image: wbtc,
       trend: "decrease",
     },
     {
       id: 5,
       name: "WETH",
-      image: matic,
+      image: weth,
       trend: "decrease",
     },
   ]);
