@@ -1,70 +1,84 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // images
 import eth from "../../assets/images/coin/coin-6.jpg";
-import arbeth from "../../assets/images/coin/coin-7.jpg";
 import wbtc from "../../assets/images/coin/coin-8.jpg";
 import arb from "../../assets/images/coin/coin-3.jpg";
 import weth from "../../assets/images/coin/coin-9.jpg";
-import matic from "../../assets/images/coin/coin-10.jpg";
 
 const Favourite = () => {
-  const coins = [
+  const [coins, setCoins] = useState([
     {
       id: 1,
       name: "ETH",
-      marketCap: "$360,6M",
-      price: "$1.878,80",
-      change: "-1,62%",
       image: eth,
       trend: "decrease",
     },
     {
       id: 2,
-      name: "arb_ETH",
-      marketCap: "$132,18M",
-      price: "$1.878,80",
-      change: "+1,62%",
-      image: arbeth,
-      trend: "increase",
-    },
-    {
-      id: 3,
       name: "WBTC",
-      marketCap: "$50,56M",
-      price: "$30.001,96",
-      change: "-1,64%",
       image: wbtc,
       trend: "decrease",
     },
     {
-      id: 4,
+      id: 3,
       name: "ARB",
-      marketCap: "$31,55M",
-      price: "$1,11",
-      change: "+3,71%",
       image: arb,
       trend: "increase",
     },
     {
-      id: 5,
-      name: "WETH",
-      marketCap: "$24,34M",
-      price: "$1.878,56",
-      change: "-1,62%",
-      image: weth,
+      id: 4,
+      name: "Litecoin",
+      image: wbtc,
       trend: "decrease",
     },
     {
-      id: 6,
-      name: "MATIC",
-      marketCap: "$19,36M",
-      price: "$0,666",
-      change: "-4,42%",
-      image: matic,
+      id: 5,
+      name: "WETH",
+      image: weth,
       trend: "decrease",
     },
-  ];
+  ]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=ethereum,arbitrum-wbtc,wrapped-bitcoin,arbitrum,wrapped-ether,litecoin"
+        );
+        const data = await response.json();
+
+        const updatedCoins = coins.map((coin) => {
+          const liveData = data.find(
+            (item) =>
+              item.symbol.toLowerCase() ===
+              coin.name.toLowerCase().replace("_", "")
+          );
+
+          if (liveData) {
+            return {
+              ...coin,
+              marketCap: `$${(liveData.market_cap / 1e6).toFixed(2)}M`,
+              price: `$${liveData.current_price.toLocaleString()}`,
+              change: `${liveData.price_change_percentage_24h.toFixed(2)}%`,
+              trend:
+                liveData.price_change_percentage_24h >= 0
+                  ? "increase"
+                  : "decrease",
+            };
+          }
+
+          return coin;
+        });
+
+        setCoins(updatedCoins);
+      } catch (error) {
+        console.error("Error fetching the market data", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div>

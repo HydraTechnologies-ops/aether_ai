@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@coinweb/cweb-wallet-library": "^0.1.68-esm",
     "@testing-library/jest-dom": "^5.17.0",
