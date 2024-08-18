@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Newtoken = () => {
   const tokens = [
     {
-      href: "choose-payment.html",
+      href: "/home",
       imgSrc: "images/coin/coin-6.jpg",
       title: "ETH",
       secondaryText: "$360,6M",
@@ -13,7 +13,7 @@ const Newtoken = () => {
       btnClass: "decrease",
     },
     {
-      href: "choose-payment.html",
+      href: "/home",
       imgSrc: "images/coin/coin-7.jpg",
       title: "arb_ETH",
       secondaryText: "$132,18M",
@@ -22,7 +22,7 @@ const Newtoken = () => {
       btnClass: "increase",
     },
     {
-      href: "choose-payment.html",
+      href: "/home",
       imgSrc: "images/coin/coin-8.jpg",
       title: "WBTC",
       secondaryText: "$50,56M",
@@ -31,7 +31,7 @@ const Newtoken = () => {
       btnClass: "decrease",
     },
     {
-      href: "choose-payment.html",
+      href: "/home",
       imgSrc: "images/coin/coin-3.jpg",
       title: "ARB",
       secondaryText: "$31,55M",
@@ -40,7 +40,7 @@ const Newtoken = () => {
       btnClass: "increase",
     },
     {
-      href: "choose-payment.html",
+      href: "/home",
       imgSrc: "images/coin/coin-9.jpg",
       title: "WETH",
       secondaryText: "$24,34M",
@@ -49,7 +49,7 @@ const Newtoken = () => {
       btnClass: "decrease",
     },
     {
-      href: "choose-payment.html",
+      href: "/home",
       imgSrc: "images/coin/coin-10.jpg",
       title: "MATIC",
       secondaryText: "$19,36M",

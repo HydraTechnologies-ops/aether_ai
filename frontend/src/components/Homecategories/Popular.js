@@ -1,62 +1,62 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Popular = () => {
   const coins = [
     {
-      href: "choose-payment.html",
+      href: "/home",
       imgSrc: "images/coin/coin-6.jpg",
       title: "ETH",
       secondaryText: "$360,6M",
       price: "$1.878,80",
       change: "-1,62%",
-      btnClass: "decrease"
+      btnClass: "decrease",
     },
     {
-      href: "choose-payment.html",
+      href: "/home",
       imgSrc: "images/coin/coin-7.jpg",
       title: "arb_ETH",
       secondaryText: "$132,18M",
       price: "$1.878,80",
       change: "+1,62%",
-      btnClass: "increase"
+      btnClass: "increase",
     },
     {
-      href: "choose-payment.html",
+      href: "/home",
       imgSrc: "images/coin/coin-8.jpg",
       title: "WBTC",
       secondaryText: "$50,56M",
       price: "$30.001,96",
       change: "-1,64%",
-      btnClass: "decrease"
+      btnClass: "decrease",
     },
     {
-      href: "choose-payment.html",
+      href: "/home",
       imgSrc: "images/coin/coin-3.jpg",
       title: "ARB",
       secondaryText: "$31,55M",
       price: "$1,11",
       change: "+3,71%",
-      btnClass: "increase"
+      btnClass: "increase",
     },
     {
-      href: "choose-payment.html",
+      href: "/home",
       imgSrc: "images/coin/coin-9.jpg",
       title: "WETH",
       secondaryText: "$24,34M",
       price: "$1.878,56",
       change: "-1,62%",
-      btnClass: "decrease"
+      btnClass: "decrease",
     },
     {
-      href: "choose-payment.html",
+      href: "/home",
       imgSrc: "images/coin/coin-10.jpg",
       title: "MATIC",
       secondaryText: "$19,36M",
       price: "$0,666",
       change: "-4,42%",
-      btnClass: "decrease"
-    }
+      btnClass: "decrease",
+    },
   ];
 
   return (
@@ -80,7 +80,9 @@ const Popular = () => {
                 </div>
                 <div className="d-flex align-items-center gap-12">
                   <span className="text-small">{coin.price}</span>
-                  <span className={`coin-btn ${coin.btnClass}`}>{coin.change}</span>
+                  <span className={`coin-btn ${coin.btnClass}`}>
+                    {coin.change}
+                  </span>
                 </div>
               </div>
             </Link>

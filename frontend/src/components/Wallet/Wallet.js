@@ -18,12 +18,12 @@ const WalletOverview = () => {
           </a>
         </h5>
         <h1 className="mt-16">
-          <a href="#">$2159,34</a>
+          <a href="#">$0.00</a>
         </h1>
         <ul className="mt-16 grid-4 m--16">
           <li>
             <Link
-              to="choose-payment.html"
+              to="/home"
               className="tf-list-item d-flex flex-column gap-8 align-items-center"
             >
               <span className="box-round bg-surface d-flex justify-content-center align-items-center">
@@ -34,7 +34,7 @@ const WalletOverview = () => {
           </li>
           <li>
             <Link
-              to="qr-code2.html"
+              to="/home"
               className="tf-list-item d-flex flex-column gap-8 align-items-center"
             >
               <span className="box-round bg-surface d-flex justify-content-center align-items-center">
@@ -45,7 +45,7 @@ const WalletOverview = () => {
           </li>
           <li>
             <Link
-              to="buy-quantity.html"
+              to="/home"
               className="tf-list-item d-flex flex-column gap-8 align-items-center"
             >
               <span className="box-round bg-surface d-flex justify-content-center align-items-center">
@@ -56,7 +56,7 @@ const WalletOverview = () => {
           </li>
           <li>
             <Link
-              to="earn.html"
+              to="/home"
               className="tf-list-item d-flex flex-column gap-8 align-items-center"
             >
               <span className="box-round bg-surface d-flex justify-content-center align-items-center">

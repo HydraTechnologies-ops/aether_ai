@@ -16,7 +16,7 @@ const MarketOverview = ({ marketData }) => {
           <div className="swiper-wrapper">
             {marketData.map((token, index) => (
               <div className="swiper-slide" key={index}>
-                <Link to="exchange-market.html" className="coin-box d-block">
+                <Link to="/home" className="coin-box d-block">
                   <div className="coin-logo">
                     <img src={token.imgSrc} alt={token.name} className="logo" />
                     <div className="title">

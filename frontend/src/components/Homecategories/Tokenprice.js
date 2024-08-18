@@ -42,7 +42,7 @@ const TokenPrice = ({ tokenIds }) => {
       const data = await response.json();
 
       const tokenData = tokenIds.map((id) => ({
-        href: "choose-payment.html",
+        href: "/home",
         imgSrc: `images/coin/${id}.jpg`, // Assuming you have images named after the token IDs
         title: id.toUpperCase(),
         secondaryText: "", // If you have additional data, you can update this field

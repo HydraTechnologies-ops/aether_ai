@@ -1,14 +1,22 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import facebook from "../../assets/images/logo/fb.jpg";
 import google from "../../assets/images/logo/google.jpg";
 import apple from "../../assets/images/logo/apple.jpg";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add your registration logic here
+
+    // Redirect to the OTP page
+    navigate("/otp");
   };
 
   return (
@@ -42,10 +50,7 @@ const Login = () => {
             </ul>
           </div>
           <div className="auth-line mt-12">Or</div>
-          <form
-            action="https://themesflat.co/html/cointexcrypto/cointex/home.html"
-            className="mt-16"
-          >
+          <form onSubmit={handleSubmit} className="mt-16">
             <fieldset className="mt-16">
               <label className="label-ip">
                 <p className="mb-8 text-small">Email</p>
@@ -78,7 +83,9 @@ const Login = () => {
             <Link to="/reset-pass" className="text-secondary">
               Forgot Password?
             </Link>
-            <button className="mt-20">Login</button>
+            <button type="submit" className="mt-20">
+              Login
+            </button>
             <p className="mt-20 text-center text-small">
               Already have an Account? &ensp;
               <Link to="/register">Sign up</Link>

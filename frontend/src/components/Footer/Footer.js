@@ -5,25 +5,25 @@ const Footer = () => {
     <div className="menubar-footer footer-fixed">
       <ul className="inner-bar">
         <li className="active">
-          <a href="home.html">
+          <a href="/home">
             <i className="icon icon-home2"></i>
             Home
           </a>
         </li>
         <li>
-          <a href="exchange-market.html">
+          <a href="/home">
             <i className="icon icon-exchange"></i>
             Exchange
           </a>
         </li>
         <li>
-          <a href="earn.html">
+          <a href="/home">
             <i className="icon icon-earn"></i>
             Earn
           </a>
         </li>
         <li>
-          <a href="wallet.html">
+          <a href="/home">
             <i className="icon icon-wallet"></i>
             Wallet
           </a>

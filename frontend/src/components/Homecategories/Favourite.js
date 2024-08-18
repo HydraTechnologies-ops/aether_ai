@@ -93,7 +93,7 @@ const Favourite = () => {
         {coins.map((coin) => (
           <li key={coin.id} className="mt-16">
             <a
-              href="choose-payment.html"
+              href="/home"
               className={`coin-item style-2 gap-12`}
             >
               <img src={coin.image} alt={coin.name} className="img" />
